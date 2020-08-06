@@ -36,8 +36,8 @@ nav .brand-logo {
 
 nav {
     box-shadow: none;
-    background: rgb(241,151,163);
-    background: linear-gradient(90deg, rgba(241,151,163,1) 17%, rgba(68,101,148,1) 65%, rgba(96,79,111,1) 100%);
+    background: rgb(221,94,137);
+    background: linear-gradient(90deg, rgba(221,94,137,1) 23%, rgba(232,132,143,1) 46%, rgba(247,187,151,1) 100%);
 }
 
 .brand-logo {
@@ -113,7 +113,7 @@ nav {
 
 .landing-page {
     margin-top: 165px;
-    color: #e3c0c0;
+    color: #fff;
 }
  
 .tagline {
@@ -138,8 +138,8 @@ width: 100%;
 }
 
 .parallax {
-    background: rgb(241,151,163);
-    background: linear-gradient(90deg, rgba(241,151,163,1) 17%, rgba(68,101,148,1) 65%, rgba(96,79,111,1) 100%);
+  background: rgb(221,94,137);
+  background: linear-gradient(90deg, rgba(221,94,137,1) 23%, rgba(232,132,143,1) 46%, rgba(247,187,151,1) 100%);
 }
 
 /*### Profile ###*/
