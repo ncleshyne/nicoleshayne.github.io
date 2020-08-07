@@ -2,127 +2,82 @@
 @import url(https://fonts.googleapis.com/css?family=OpenSans);
 @import url(https://fonts.googleapis.com/css?family=Lato);
 @font-face {
-    font-family: vesterbro;
-    src: url(../fonts/vesterbro.otf);
+  font-family: vesterbro;
+  src: url(../fonts/vesterbro.otf);
 }
 
 
 /*###### DEFAULTS #######*/
 h1 {
-    font-family: vesterbro, sans-serif;
-    font-size: 3em;
-    font-style: normal;
-    font-weight: 400;
-    letter-spacing: 2px;
-    text-align: center;
+  font-family: vesterbro, sans-serif;
+  font-size: 3em;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-align: center;
 }
 
 h2, h3, h4, h5 {
-    font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  color: #434242;
 
 }
 
 p {
   line-height: 2rem;
+  color: #434242;
 }
 
+.divider {
+  background-color: rgb(67, 66, 66,0.3);
+}
 /*####### Navbar background: rgb(96,79,111)!important;
     background: linear-gradient(90deg, rgba(96,79,111,1) 0%, rgba(68,101,148,1) 35%, rgba(241,151,163,1) 100%)!important; ########*/
 nav ul a,
 nav .brand-logo {
-    color: #fff;
-    font-family: "Montserrat", sans-serif;
+  color: white;
+  font-family: "Montserrat", sans-serif;
 }
 
 nav {
-    box-shadow: none;
-    background: rgb(221,94,137);
-    background: linear-gradient(90deg, rgba(221,94,137,1) 23%, rgba(232,132,143,1) 46%, rgba(247,187,151,1) 100%);
+  box-shadow: white;
+  background: linear-gradient(90deg, rgba(221,94,137,0.7) 23%, rgba(232,132,143,0.7) 46%, rgba(247,187,151,0.7) 100%)!important;
 }
 
 .brand-logo {
-    margin-top: 8px;
+  margin-top: 8px;
 }
 .sidenav-trigger {
-    color: 26a69a;
+  color: black;
 }
 
 .sidenav-overlay {
-    opacity: 0!important;
+  opacity: 0!important;
 }
-/*##### Scroll Down #####*/
-.scroll-down {
-    opacity: 1;
-    -webkit-transition: all .5s ease-in 3s;
-    transition: all .5s ease-in 3s;
-  }
-  
-  .scroll-down {
-    position: absolute;
- 
-    left: 50%;
-    margin-left: -16px;
-    display: block;
-    width: 32px;
-    height: 32px;
-    border: 2px solid #FFF;
-    background-size: 14px auto;
-    border-radius: 50%;
-    z-index: 2;
-    -webkit-animation: bounce 2s infinite 2s;
-    animation: bounce 2s infinite 2s;
-    -webkit-transition: all .2s ease-in;
-    transition: all .2s ease-in;
-  }
-  
-  .scroll-down:before {
-      position: absolute;
-      top: calc(50% - 8px);
-      left: calc(50% - 6px);
-      transform: rotate(-45deg);
-      display: block;
-      width: 12px;
-      height: 12px;
-      content: "";
-      border: 2px solid white;
-      border-width: 0px 0 2px 2px;
-  }
-  
-  @keyframes bounce {
-    0%,
-    100%,
-    20%,
-    50%,
-    80% {
-      -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-      transform: translateY(0);
-    }
-    40% {
-      -webkit-transform: translateY(-10px);
-      -ms-transform: translateY(-10px);
-      transform: translateY(-10px);
-    }
-    60% {
-      -webkit-transform: translateY(-5px);
-      -ms-transform: translateY(-5px);
-      transform: translateY(-5px);
-    }
-  }
+nav.scrolled {
+  background: rgb(221,94,137);
+  background: linear-gradient(90deg, rgba(221,94,137,1) 23%, rgba(232,132,143,1) 46%, rgba(247,187,151,1) 100%)!important;
+  background-size: 400% 400%;
+  opacity: 1;
+  color: white!important;
+}
+
+
 /*####### Landing page ########*/
 
 .landing-page {
-    margin-top: 165px;
-    color: #fff;
+  margin-top: 165px;
+  color: #fff;
 }
  
 .tagline {
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    letter-spacing: 2px;
-    text-align: center;
-    margin-top: 20px;
+  color: white;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: 20px;
 }
 .parallax-container {
   display: block;
@@ -134,14 +89,37 @@ nav {
 }
 
 .parallax-container .section {
-width: 100%;
+  width: 100%;
 }
 
 .parallax {
-  background: rgb(221,94,137);
   background: linear-gradient(90deg, rgba(221,94,137,1) 23%, rgba(232,132,143,1) 46%, rgba(247,187,151,1) 100%);
+	background-size: 400% 400%;
+	-webkit-animation: gradientBG 10s ease infinite;
+	animation: gradientBG 10s ease infinite;
 }
-
+@-webkit-keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
 /*### Profile ###*/
 .image {
     text-align: center;
@@ -158,15 +136,40 @@ width: 100%;
     margin-top: 55px;
 }
 #profile-header {
-    font-family: vesterbro, sans-serif;
-    font-style: normal;
-    font-weight: 100;
-    letter-spacing: 2px;
-    text-align: center;
-    color: #5a5f75;
+  font-family: vesterbro, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #434242;
 }
 #description {
     color: #f197a3;
+}
+
+/*### Experiences ###*/
+#exp-container {
+  background: rgba(245, 181, 150, 0.3)!important;
+}
+
+ul.medtec:not(.browser-default)>li {
+  list-style-type: square;
+  margin-left: 50px;
+}
+
+div.allow-tab {
+  white-space: pre; 
+	tab-size: 8; /*8 is default in css meaning it*/ 
+	-moz-tab-size: 8; /*gives them .5 their normal width */ 
+	-o-tab-size: 8; 
+}
+
+.linkbutt {
+  margin-top: 10px;
+}
+.location-button, .linkbutt {
+  color: #f197a3;
+  font-size: 21px!important;
 }
 /*### Mobile ###*/
 @media only screen and (max-width : 992px) {
@@ -194,4 +197,63 @@ width: 100%;
 
 footer.page-footer {
   margin: 0;
+}
+/*##### Scroll Down #####*/
+.scroll-down {
+  opacity: 1;
+  -webkit-transition: all .5s ease-in 3s;
+  transition: all .5s ease-in 3s;
+}
+
+.scroll-down {
+  position: absolute;
+
+  left: 50%;
+  margin-left: -16px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #FFF;
+  background-size: 14px auto;
+  border-radius: 50%;
+  z-index: 2;
+  -webkit-animation: bounce 2s infinite 2s;
+  animation: bounce 2s infinite 2s;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.scroll-down:before {
+    position: absolute;
+    top: calc(50% - 8px);
+    left: calc(50% - 6px);
+    transform: rotate(-45deg);
+    display: block;
+    width: 12px;
+    height: 12px;
+    content: "";
+    border: 2px solid white;
+    border-width: 0px 0 2px 2px;
+}
+
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  60% {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
 }
