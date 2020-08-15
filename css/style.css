@@ -244,8 +244,20 @@ div.allow-tab {
   font: 14px ; 
 
 }
+#mc_embed_signup .button {
+  color: #faa9a7;
+  background-color: #ffffff;
+  border-color: #faa9a7;
+}
+#mc_embed_signup .button:hover {
+  color: #fff;
+  background-color: #5B88B7
+}
 
 .form-box {
+  color: #faa9a7;
+  background-color: #ffffff;
+  border-color: #faa9a7;
   height: 500px;
   width: -webkit-fill-available;
   background-color: #fff;
